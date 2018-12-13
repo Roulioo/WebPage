@@ -2,27 +2,37 @@ module.exports = [
     {
         type: 'input',
         name: 'titre_site',
-        message: 'Quel est le titre de votre site web ? '
+        message: 'What is the title of your website ? '
+    },
+    {
+        type: 'list',
+        name: 'traitement',
+        message: 'What language of treatment do you want ?',
+        choices: [
+            'en (English)',
+            'fr (French)',
+            'es (Spanish)'
+        ]
     },
     {
         type: 'confirm',
         name: 'bootstrap',
-        message: 'Voulez-vous utiliser Bootstrap CSS/JS ?'
+        message: 'Do you want to use Bootstrap CSS / JS ?'
     },
     {
         type: 'confirm',
         name: 'jquery',
-        message: 'Voulez-vous utiliser la bibliothéque "jQuery" ?'
+        message: 'Do you want to use the library "jQuery" ?'
     },
     {
         type: 'confirm',
         name: 'responsive',
-        message: 'Voulez-vous prévoir une version responsive pour le site ?'
+        message: 'Do you want to provide a responsive version for your site ?'
     },
     {
         type: 'list',
         name: 'polices',
-        message: 'Quelle police principale souhaitez-vous utiliser ?',
+        message: 'Which main font do you want to use ?',
         choices: [
             'Roboto',
             'Open+Sans',
