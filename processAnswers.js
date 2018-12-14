@@ -1,3 +1,5 @@
+// My packages
+
 const fs = require('fs')
 const slug = require('slug')
 
@@ -19,7 +21,7 @@ module.exports = function(answers) {
 
     function creerFichierHTML(answers) {
         
-    // Variable qui stocke le document HTML5
+    // Variable that stores the HTML document
 
     let htmlString = `<!DOCTYPE html>
     `
@@ -38,7 +40,7 @@ module.exports = function(answers) {
 
     if(answers.traitement === "es (Spanish)"){
         htmlString += `
-    <html lang="fr">
+    <html lang="es">
         `
     }
 
@@ -77,20 +79,75 @@ module.exports = function(answers) {
             
     </html>`;
 
-        // Creating the file if not already created
+    // My variable for the css
 
+    let cssString = `/* Here is my css for my web page */`
+
+    // If it's true we'll add the css for the responsive version
+
+    if(answers.responsive === true){
+        cssString += `
+
+@media all and (max-width:480px){
+    #logo{float : none; width: 30%; margin-left: 5%} /* logo and menu is example in here */
+    #menu{float : none; width: auto; margin-left: 10px;}
+}`
+    };
+
+    if(answers.responsive === true){
+        fs.writeFile('style.css',cssString,(err) => { // Create a css file for responsive version
+            if (err) throw err;
+                console.log("The css file is created\n");
+            });
+    };
+    
+    // Creating the file index.html if not already created
+
+    if(answers.responsive === false){
         fs.writeFile('index.html', htmlString,(err) => {
             if (err) throw err;
-                console.log("The html file is created");
+                console.log("The html file is created\n");
         });
+    }else if(answers.responsive === true){
+        fs.writeFile('index.html', htmlString,(err) => {
+            if (err) throw err;
+                console.log("The html file is created\n");
+        });
+    }
 
+    // We'll add the font chosen on our css for the web page
+
+    if(answers.responsive === false || answers.responsive === true){
     
+if(answers.polices === "Lato"){
+            cssString += `
+        
+body{
+    font-family: Lato, Helvetica, sans-serif;
+}`
+    };
+        
+    if(answers.polices === "Roboto"){
+        cssString += `
+        
+body{
+    font-family: "Roboto";
+}`
+    };
+        
+    if(answers.polices === "Open+Sans"){
+        cssString += `
+        
+body{
+    font-family: "Open Sans", sans-serif;
+}`
+    };
 
-    // Creating a css file for responsive version
-
-    fs.writeFile('style.css', htmlString,(err) => {
+    fs.writeFile('style.css',cssString,(err) => { // Create a css file for responsive version
         if (err) throw err;
-            console.log("The css file is created\n");
-    });
+            console.log("The font css file is created\n");
+        });
+    
+}
 
 }
