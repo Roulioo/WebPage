@@ -1,0 +1,27 @@
+{
+  "name": "@roulio/webpage",
+  "version": "1.0.0",
+  "description": "Application to allow create few files to start a great Web Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roulioo/WebPage"
+  },
+  "author": "Pereira Julio",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "commander": "^2.19.0",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.1",
+    "shuffle": "^0.2.2",
+    "slug": "^0.9.2"
+  },
+  "bin": {
+    "snippet": "./index.js"
+  }
+}
