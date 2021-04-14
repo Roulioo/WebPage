@@ -9,6 +9,10 @@ Npm package to create some files to start a web project.
 5. Provide a responsive version for the site
 6. Select a font
 
+# Technologies
+
+- Javascript
+
 # How to test
 
 1. Go to current folder of project in terminal
