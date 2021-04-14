@@ -1,41 +1,21 @@
-Hello people, today I'm in autonomy in my classroom.
+# Webpage
 
-Our professor tel me to make a program as I want. 
+Npm package to create some files to start a web project.
 
-After a long reflection, I decided to create a program that will allow you to generate few files to create a great Webpage.
- 
-I hope you will love my program and if you have any questions or a suggestion tell me.
+1. Create a folder name
+2. Select your language
+3. Use Bottstrap CSS / JS
+4. Use jQuery library
+5. Provide a responsive version for the site
+6. Select a font
 
-Enjoy and thanks for your collaboration.
+# How to test
 
-For use this program, it's not very complicate.
+1. Go to current folder of project in terminal
+2. Run "node_modules"
+3. Run "node index.js"
+4. Enjoy !
 
-You must install node, npm and four packages here bellow :
+# Information
 
---> figlet
---> clear
---> chalk
---> inquirer
---> fs
---> slug
-
-In first, in your console you must install node and after npm.
-
-Here is how install node and npm : 
-
-Node in Mac --> In console(brew install node) or in Internet (https://nodejs.org/en/download/)
-
-Node in Windows --> In internet https://nodejs.org/en/download/
-
-For install, you need open your console and be in the folder where is my program.
-And in your console you'll must write : "npm install <package_name>"
-
-For example : "npm install figlet" or "npm install inquirer"
-
-When the packages are installed, let's go to test my program.
-
-In your console write : "node index.js" that allow to launch my index programm.
-
-Great, you are a real programmer.
-
-Bye bye.
+I can be contacted for any information by email: julioocesarr@outlook.fr
